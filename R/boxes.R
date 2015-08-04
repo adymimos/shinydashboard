@@ -402,5 +402,5 @@ tabBox <- function(..., id = NULL, selected = NULL, title = NULL,
     )
   }
 
-  div(class = paste0("col-sm-", width), content)
+  div(content)
 }
