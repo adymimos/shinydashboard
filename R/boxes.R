@@ -368,7 +368,7 @@ box <- function(..., title = NULL, footer = NULL, status = NULL,
 #' }
 #' @export
 tabBox <- function(..., id = NULL, selected = NULL, title = NULL,
-                   width = 6, height = NULL, side = c("left", "right"))
+                   width = 6, height = NULL, side = c("left", "right"),padding=T)
 {
   side <- match.arg(side)
 
@@ -401,6 +401,8 @@ tabBox <- function(..., id = NULL, selected = NULL, title = NULL,
       tags$li(class = paste("header", titleClass), title)
     )
   }
-
-  div(content)
+  if(padding)
+    div(class = paste0("col-sm-", width), content)
+  else
+    div(content)
 }
