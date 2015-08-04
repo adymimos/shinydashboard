@@ -401,7 +401,7 @@ tabBox <- function(..., id = NULL, selected = NULL, title = NULL,
       tags$li(class = paste("header", titleClass), title)
     )
   }
-  if(padding)
+  if(padding == TRUE)
     div(class = paste0("col-sm-", width), content)
   else
     div(content)
